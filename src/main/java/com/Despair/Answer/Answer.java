@@ -7,6 +7,7 @@ import jakarta.persistence.ManyToOne;
 import lombok.Getter;
 import lombok.Setter;
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.Set;
 
 @Getter
@@ -31,4 +32,7 @@ public class Answer {
 
     @ManyToMany
     Set<SiteUser> voter;
+
+//    @OneToMany(mappedBy = "answer", cascade = CascadeType.ALL)
+//    private List<Answer> answerList;
 }
